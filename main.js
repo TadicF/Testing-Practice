@@ -4,8 +4,13 @@ export function capitalize(string) {
     return firstLetter.toUpperCase().concat(rest);
 }
 
-function reverseString(string) {
-
+export function reverseString(string) {
+    const strArr = string.split('');
+    const reverseArr = [];
+    for(let i = strArr.length - 1; i >= 0; i--) {
+        reverseArr.push(strArr[i]);
+    }
+    return reverseArr.join('');
 }
 
 const calculator = {
