@@ -63,3 +63,21 @@ const Checks = {
         return false;
     }
 }
+
+export function analyzeArray(arr) {
+    return { 
+        length: arr.length,
+        min: Math.min(...arr),
+        max: Math.max(...arr),
+        average: getAverage(arr), 
+    }
+}
+
+function getAverage(arr) {
+    let sumAll = 0;
+    arr.forEach((num) => {
+        sumAll += num;
+    })
+
+    return Math.round(sumAll / arr.length);
+}

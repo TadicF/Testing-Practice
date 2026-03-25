@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator, caeserCipher } from "./main";
+import { capitalize, reverseString, calculator, caeserCipher, analyzeArray } from "./main";
 
 it('Capitalize', () => {
     expect(capitalize('dog')).toBe('Dog');
@@ -54,4 +54,20 @@ it('Caesar Cipher (Preservation)', () => {
 
 it('Caesar Cipher (Punctation)', () => {
     expect(caeserCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+})
+
+it('Analyze Array (length)', () => {
+    expect(analyzeArray([1,3,6,2,9]).length).toBe(5);
+})
+
+it('Analyze Array (min)', () => {
+    expect(analyzeArray([1, 5, 9, 3, 4]).min).toBe(1);
+})
+
+it('Analyze Array (max)', () => {
+    expect(analyzeArray([1, 4, 9, 3, 7, 8]).max).toBe(9);
+})
+
+it('Analyze Array (average)', () => {
+    expect(analyzeArray([1, 8, 3, 4, 2, 6]).average).toBe(4);
 })
